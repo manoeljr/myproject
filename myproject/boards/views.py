@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
-from myproject.boards.models import Board
+from .models import Board
 
 
-def home(request):
+def index(request):
     boards = Board.objects.all()
-    return render(request, 'home.html', {'boards': boards})
+    return render(request, 'boards/index.html', {'boards': boards})
 

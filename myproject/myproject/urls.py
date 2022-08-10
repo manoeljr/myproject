@@ -1,9 +1,8 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from myproject.boards.views import home
 
 urlpatterns = [
-    path('', home, name='home'),
+    path('', include('boards.urls')),
     path('admin/', admin.site.urls),
 ]
